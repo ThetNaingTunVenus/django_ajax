@@ -88,6 +88,11 @@ form.addEventListener('submit', function(e){
     e.preventDefault()
     console.log('Form Submit Success')
     var url = 'http://127.0.0.1:8000/api/'
+
+    {% comment %} if (activeItem != null){
+        var url = 'http://127.0.0.1:8000/api/'
+    } {% endcomment %}
+
     var title = document.getElementById('title').value
     fetch(url,{
         method:'POST',
